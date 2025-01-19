@@ -11,4 +11,4 @@ Using image segmentation techniques across multiple biomarkers (EpCAM, Hoechst, 
 
 **Actual integrated image for Analysis**
 The image integrates patches segmented from various biomarkers and calculates metrics for analysis. This image is displayed within the project's custom-designed user interface (UI). The UI provides a streamlined platform for healthcare professionals to effectively review and validate potential circulating tumor cell (CTC) images identified by the system. Its intuitive design enables clinicians to save time while ensuring accuracy in their evaluations, ultimately facilitating better decision-making.
-![CTC(UI)](https://raw.githubusercontent.com/WanLinChen/blood/master/CTC(UI).jpg)
+![CTC(UI)](https://raw.githubusercontent.com/WanLinChen/Detection-of-CTC/master/CTC.jpg)
