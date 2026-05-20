@@ -1,4 +1,4 @@
-# Automated Circulating Tumor Cell (CTC) Detection Pipeline
+# Automated Circulating Tumor Cell (CTC) Detection
 
 > **Clinical Deployment:** Chang Gung Memorial Hospital, Taiwan  
 > **Key Result:** 86% reduction in false negatives vs. manual screening  
