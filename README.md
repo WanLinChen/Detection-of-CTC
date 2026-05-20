@@ -8,7 +8,7 @@
 
 ## 📌 Background
 
-Circulating Tumor Cells (CTCs) are cancer cells that detach from primary tumors and enter the bloodstream — their presence is a critical indicator for cancer metastasis monitoring. However, in 1mL of blood, there are **billions of red blood cells** and potentially only **a handful of CTCs**, making manual detection extremely difficult and time-consuming.
+Circulating Tumor Cells (CTCs) are cancer cells that detach from primary tumors and enter the bloodstream, their presence is a critical indicator for cancer metastasis monitoring. However, in 1mL of blood, there are **billions of red blood cells** and potentially only **a handful of CTCs**, making manual detection extremely difficult and time-consuming.
 
 This project builds an automated end-to-end CTC detection pipeline from multi-channel fluorescence microscopy images of blood samples collected via **Self-Assembly Cell Array (SACA) microfluidic chips** from colorectal cancer patients at Chang Gung Memorial Hospital.
 
@@ -98,7 +98,7 @@ UI:              Tkinter
 Detection-of-CTC/
 ├── main.py          # Main pipeline: detection, feature extraction, visualization
 ├── threshold.py     # Threshold computation and SSIM implementation
-├── mask_.py         # Slide boundary detection and mask generation
+├── mask_.py         # Slide boundary detection and mask generation for target area
 ├── data/            # Input fluorescence images (not included - patient data)
 └── README.md
 ```
