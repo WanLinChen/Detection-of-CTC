@@ -77,11 +77,11 @@ Cell contours are delineated using **Otsu thresholding** on the EpCAM patch. A *
 ## Tech Stack
 
 ```
-Language:        Python 3
+Language:         Python 3
 Image Processing: OpenCV (cv2), scikit-image
-Scientific:      NumPy, SciPy, scikit-learn (GaussianMixture)
-Visualization:   Matplotlib
-UI:              Tkinter
+Scientific:       NumPy, SciPy, scikit-learn (GaussianMixture)
+Visualization:    Matplotlib
+UI:               Tkinter
 ```
 
 
