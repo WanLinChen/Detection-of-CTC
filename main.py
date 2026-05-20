@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Dec  1 16:00:55 2022
-
-@author: chris
-"""
-# -*- coding: utf-8 -*-
-"""
 CTC Detection Pipeline - Main Analysis Script
 ==============================================
 Automated detection of Circulating Tumor Cells (CTCs) from
