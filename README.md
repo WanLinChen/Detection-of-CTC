@@ -1,4 +1,4 @@
-# 🔬 Automated Circulating Tumor Cell (CTC) Detection Pipeline
+# Automated Circulating Tumor Cell (CTC) Detection Pipeline
 
 > **Clinical Deployment:** Chang Gung Memorial Hospital, Taiwan  
 > **Key Result:** 86% reduction in false negatives vs. manual screening  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Background
+## Background
 
 Circulating Tumor Cells (CTCs) are cancer cells that detach from primary tumors and enter the bloodstream, their presence is a critical indicator for cancer metastasis monitoring. However, in 1mL of blood, there are **billions of red blood cells** and potentially only **a handful of CTCs**, making manual detection extremely difficult and time-consuming.
 
@@ -14,7 +14,7 @@ This project builds an automated end-to-end CTC detection pipeline from multi-ch
 
 ---
 
-## 🧬 Data Description
+## Data Description
 
 Blood samples are imaged across **3 fluorescence wavelength channels**, each targeting a different cell type:
 
@@ -34,14 +34,14 @@ Blood samples are imaged across **3 fluorescence wavelength channels**, each tar
 
 ---
 
-## 🔄 Pipeline Architecture
+## Pipeline Architecture
 
 <img width="1659" height="948" alt="image" src="https://github.com/user-attachments/assets/eef459b5-6e62-4c02-8fc4-d5c029455364" />
 
 
 ---
 
-## 🧪 Key Technical Details
+## Key Technical Details
 
 ### Image Preprocessing
 The Hoechst (365nm) channel — which stains all cell nuclei — is used to determine the physical boundary of the blood sample slide. A circular mask is then applied to the EpCAM image to ensure all downstream analysis is confined to the actual blood sample region, eliminating edge artifacts.
@@ -68,7 +68,7 @@ Cell contours are delineated using **Otsu thresholding** on the EpCAM patch. A *
 
 ---
 
-## 📊 Results
+## Results
 
 | Metric | Result |
 |--------|--------|
@@ -80,7 +80,7 @@ Cell contours are delineated using **Otsu thresholding** on the EpCAM patch. A *
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ```
 Language:        Python 3
@@ -92,7 +92,7 @@ UI:              Tkinter
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Detection-of-CTC/
@@ -105,7 +105,7 @@ Detection-of-CTC/
 
 ---
 
-## 🔬 Clinical Context
+## Clinical Context
 
 This pipeline was developed for the **liquid biopsy** workflow — a non-invasive alternative to surgical tumor biopsy. By analyzing a patient's blood sample rather than requiring surgery, CTCs can be tracked longitudinally to:
 
@@ -117,13 +117,13 @@ The system was designed to **augment, not replace** clinical judgment: the autom
 
 ---
 
-## 📚 Background Reference
+## Background Reference
 
 Developed as undergraduate independent research at the **Data Analysis and Interpretation Laboratory, National Tsing Hua University (NTHU), Taiwan** (Sep 2021 – Sep 2022), supervised by Prof. Shun-Chi Wu.
 
 ---
 
-## 👤 Author
+## Author
 
 **Wan-Lin (Christine) Chen**  
 M.S. Bioengineering, UC San Diego  
