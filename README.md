@@ -36,72 +36,8 @@ Blood samples are imaged across **3 fluorescence wavelength channels**, each tar
 
 ## 🔄 Pipeline Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    INPUT: Multi-channel Fluorescence Images       │
-│              (365nm Hoechst + 488nm EpCAM + 630nm CD45)          │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    STEP 1: Image Preprocessing                    │
-│  • Apply Hoechst (365nm) image to determine slide boundary       │
-│  • Generate mask to restrict analysis to blood sample region     │
-│  • Apply mask onto EpCAM (488nm) image                           │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                  STEP 2: Candidate CTC Detection                  │
-│  • Identify local maximum intensity regions in EpCAM image       │
-│  • Extract 40×40 pixel patches around each bright spot           │
-│  • (min peak distance = 20px; covers typical CTC diameter)       │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                  STEP 3: Multi-Index Feature Extraction           │
-│                                                                   │
-│  For each candidate patch, compute 5 biological indices:         │
-│                                                                   │
-│  ① Diameter    — contour diameter (valid range: 6–16 nm)         │
-│  ② Lightness   — mean grayscale intensity of contour region      │
-│                  (valid range: 34.3–231.6)                        │
-│  ③ SSIM        — structural similarity between contour           │
-│                  and its equal-area circle (valid: 0.495–0.917)  │
-│  ④ Distance    — Euclidean distance from EpCAM contour           │
-│                  center to nearest Hoechst contour center        │
-│  ⑤ IoU         — overlap ratio between EpCAM and                 │
-│                  Hoechst (nucleus) contours                       │
-│                                                                   │
-│  Key methods: Otsu thresholding, Gaussian Mixture Model (GMM),   │
-│  morphological analysis, SSIM computation                        │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                  STEP 4: Multi-channel Visualization             │
-│  • Integrate all channel images into unified display per patch   │
-│  • Show: EpCAM raw, EpCAM segmented, Hoechst, overlap,          │
-│          white light, CD45, EpCAM+CD45 overlap                   │
-│  • Display computed index values alongside each patch            │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                  STEP 5: Clinical UI for Expert Review           │
-│  • Clinician reviews each candidate patch with full metrics      │
-│  • Keyboard interface: [1] = CTC  |  [2] = Not CTC              │
-│  • Results saved to CTC / Not CTC folders for downstream use     │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    OUTPUT: Validated CTC Dataset                  │
-│     → Supports cancer staging, treatment monitoring, and         │
-│       accumulation of labeled data for future ML models          │
-└─────────────────────────────────────────────────────────────────┘
-```
+<img width="1659" height="948" alt="image" src="https://github.com/user-attachments/assets/eef459b5-6e62-4c02-8fc4-d5c029455364" />
+
 
 ---
 
