@@ -4,7 +4,6 @@
 > **Key Result:** 86% reduction in false negatives vs. manual screening  
 > **Data Source:** 20 colorectal cancer patients undergoing immunotherapy
 
----
 
 ## Background
 
@@ -12,7 +11,6 @@ Circulating Tumor Cells (CTCs) are cancer cells that detach from primary tumors 
 
 This project builds an automated end-to-end CTC detection pipeline from multi-channel fluorescence microscopy images of blood samples collected via **Self-Assembly Cell Array (SACA) microfluidic chips** from colorectal cancer patients at Chang Gung Memorial Hospital.
 
----
 
 ## Data Description
 
@@ -32,14 +30,12 @@ Blood samples are imaged across **3 fluorescence wavelength channels**, each tar
 - Standard response (3 months)
 - Late response (6 months)
 
----
 
 ## Pipeline Architecture
 
 <img width="1659" height="948" alt="image" src="https://github.com/user-attachments/assets/eef459b5-6e62-4c02-8fc4-d5c029455364" />
 
 
----
 
 ## Key Technical Details
 
@@ -66,7 +62,6 @@ This adapts to per-image fluorescence intensity variation without requiring manu
 ### Segmentation
 Cell contours are delineated using **Otsu thresholding** on the EpCAM patch. A **Gaussian Mixture Model (2 components)** is additionally fitted to determine the boundary between background and foreground fluorescence in both 488nm and 365nm channels.
 
----
 
 ## Results
 
@@ -78,7 +73,6 @@ Cell contours are delineated using **Otsu thresholding** on the EpCAM patch. A *
 | Patient Cohort | 20 colorectal cancer patients |
 | Timepoints Analyzed | 4 per patient |
 
----
 
 ## Tech Stack
 
@@ -90,7 +84,6 @@ Visualization:   Matplotlib
 UI:              Tkinter
 ```
 
----
 
 ## Repository Structure
 
@@ -103,7 +96,6 @@ Detection-of-CTC/
 └── README.md
 ```
 
----
 
 ## Clinical Context
 
@@ -115,13 +107,11 @@ This pipeline was developed for the **liquid biopsy** workflow — a non-invasiv
 
 The system was designed to **augment, not replace** clinical judgment: the automated pipeline surfaces candidates with quantitative metrics, while clinicians make the final determination through the UI — combining computational speed with clinical expertise.
 
----
 
 ## Background Reference
 
 Developed as undergraduate independent research at the **Data Analysis and Interpretation Laboratory, National Tsing Hua University (NTHU), Taiwan** (Sep 2021 – Sep 2022), supervised by Prof. Shun-Chi Wu.
 
----
 
 ## Author
 
