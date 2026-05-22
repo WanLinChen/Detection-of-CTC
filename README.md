@@ -89,9 +89,8 @@ UI:               Tkinter
 
 ```
 Detection-of-CTC/
-├── main.py          # Main pipeline: detection, feature extraction, visualization
-├── threshold.py     # Threshold computation and SSIM implementation
-├── mask_.py         # Slide boundary detection and mask generation for target area
+├── main.py          # Main pipeline: detection, feature extraction, visualization     
+├── utils.py         
 ├── data/            # Input fluorescence images (not included - patient data)
 └── README.md
 ```
