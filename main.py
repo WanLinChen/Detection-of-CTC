@@ -28,12 +28,11 @@ import matplotlib.pyplot as plt
 import math
 from skimage.feature import peak_local_max
 from sklearn.mixture import GaussianMixture
-from threshold import compute_threshold, compare_structure
 from scipy.spatial import distance
 from skimage import measure, color
 from sklearn.metrics import confusion_matrix
 from skimage.measure import label, regionprops, regionprops_table
-from mask_ import get_mask
+from utils import get_mask, compute_threshold, compare_structure
 
 # ─────────────────────────────────────────────
 # STEP 1: Load fluorescence images
