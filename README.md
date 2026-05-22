@@ -33,7 +33,7 @@ Blood samples are imaged across **3 fluorescence wavelength channels**, each tar
 
 ## Pipeline Architecture
 
-<img width="1659" height="948" alt="image" src="https://github.com/user-attachments/assets/eef459b5-6e62-4c02-8fc4-d5c029455364" />
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/5ef0716b-f478-4178-a5ab-b18f5c20a8b3" />
 
 
 
